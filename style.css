@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background-image: url("img/img0.jpg");
+    background-size: cover;background-repeat: no-repeat;
+}
+
+li{list-style: none;}
+a{text-decoration: none;}
+.btn{padding: 8px 12px;color: #000048; letter-spacing: 0.1rem;font-size: 1.3rem;}
+
+nav{display: flex; align-items: center;justify-content: space-between;text-align: 
+    center;padding: 15px;letter-spacing: 0.1rem; background-color: #000048;}
+nav a{font-size: 1.4rem;color: #ffffff;text-shadow: 0px 2px 2px cyan;cursor: pointer;}
+nav ul{display: flex;justify-content: space-between; color: #ffffff;}
+nav ul li{font-size: 1rem; letter-spacing: 0.1rem;padding: 10px; text-transform: uppercase;font-weight: 400;cursor: pointer;}
+
+.container{
+    display: flex;align-items: center;justify-content: center;margin: auto;
+}
+.container .text h1{padding-top: 50px; color: #000048;letter-spacing: 0.2rem;
+    text-transform: uppercase;font-weight: 400; font-size: 2.5rem;text-shadow:0px 2px 2px rgba(255, 255, 255, 0.5); }
+.container .clock-box{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    /*background:linear-gradient(49deg, rgb(225, 156, 156) 0%, rgba(7, 50, 98, 1) 50%, rgba(0, 174, 207, 1) 75%, rgba(255, 85, 95, 1) 100%); ;*/
+    width: 315px;
+    height: 315px;
+    border-radius: 50%; border: 2px solid #cccccc;
+    box-shadow: 0px 0px 20px black;
+    margin-top: 50px;padding: 5px;
+}
+
+.clock{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+   /* background-color: rgba(255, 255, 255, 0.1);*/
+    border: 2px solid rgba(255, 255, 255, 0.20);
+    box-shadow: 0px 0px 10px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /* background-color: #000048;*/
+}
+.clock:hover{background:linear-gradient(49deg, rgb(225, 156, 156,.5) 0%, rgba(7, 50, 98, 1) 50%, rgba(0, 174, 207, 1) 75%, rgba(255, 85, 96, 0.944) 100%); }
+
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i))); 
+    inset: 12px;
+    text-align: center;
+}
+
+.clock span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 30px;color: #ffffff;text-shadow:0px 2px 2px black;
+}
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i{
+    position: absolute;
+    background-color: var(--clr);
+    width: 4px;
+    height: var(--h);
+    border-radius: 8px;
+}
